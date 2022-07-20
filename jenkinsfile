@@ -1,6 +1,10 @@
 def tomcatServerUrl = "http://172.31.14.95"
 pipeline {
-  
+  agent {
+   node {
+      label 'master'
+    }
+  }
   stages {
     //Use this code for inline pipeline script option
     /* stage('Code checkout') {
