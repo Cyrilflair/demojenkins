@@ -1,11 +1,6 @@
 def tomcatServerUrl = "http://172.31.14.95"
 pipeline {
-  agent {
-   /* node {
-      label 'jenkins-slave'
-    }*/
-  }
-
+  
   stages {
     //Use this code for inline pipeline script option
     /* stage('Code checkout') {
@@ -26,7 +21,7 @@ pipeline {
       steps {
         //deploy war on tomcat server
         deploy adapters: [tomcat8(url: "${tomcatServerUrl}",
-            credentialsId: 'tomcat-credentials')],
+            credentialsId: 'tomcatuser')],
           war: 'target/*.war',
           contextPath: 'pipeline-app'
 
