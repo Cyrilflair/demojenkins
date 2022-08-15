@@ -1,4 +1,4 @@
-def tomcatServerUrl = "http://20.114.161.119:8080/"
+def tomcatServerUrl = "http://54.151.159.146/:8080/"
 pipeline {
   agent {
    node {
@@ -10,7 +10,7 @@ pipeline {
     /* stage('Code checkout') {
       steps {
         //download code from github
-        git 'https://github.com/sachinchandi55/jenkinsdemo.git'
+        git 'https://github.com/Cyrilflair/demojenkins.git'
       }
 
     }*/
